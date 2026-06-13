@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   rush.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/13 15:19:14 by akorthou          #+#    #+#             */
-/*   Updated: 2026/06/13 21:59:16 by breheg           ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   rush.c                                             :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/06/13 15:19:14 by akorthou      #+#    #+#                 */
+/*   Updated: 2026/06/13 22:08:42 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ int	*parse_input(char *str, int *result)
 
 int place_boxes(int **grid, int i, int j, int n)
 {
+	int	placed_all_boxes;
+
+	placed_all_boxes =0;
 	
 }
 int	 main(void)
@@ -55,6 +58,4 @@ int	 main(void)
 	parse_input(input,constraints);
 	place_boxes(grid, i, j, n);
 	
-
-	i=0;
 }
