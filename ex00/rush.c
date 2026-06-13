@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   rush.c                                             :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/06/13 15:19:14 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 01:00:44 by akorthou      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   rush.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/13 15:19:14 by akorthou          #+#    #+#             */
+/*   Updated: 2026/06/14 01:23:10 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <header.h>
+#include "header.h"
 
 int	*parse_input(char *str, int *result)
 {
@@ -72,23 +70,5 @@ void place_boxes(int grid[4][4], int i, int j, int n)
 		
 		}
 	}	
-	
-}
-int	 main(void)
-{
-	char input[]= "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
-	int	constraints[16];
-	int n;
-	int grid[4][4];
-	int i;
-	int j;
-	
-	
-	n = 4;
-	i = 0;
-	j = 0;
-	init_grid(grid, n);
-	parse_input(input,constraints);
-	place_boxes(grid, i, j, n);
 	
 }

@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   checks.c                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/06/13 13:40:30 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 00:55:33 by akorthou      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   checks.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/13 13:40:30 by akorthou          #+#    #+#             */
+/*   Updated: 2026/06/14 01:22:25 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "header.h"
 
 int	check_row_left(int row[4], int constraint, int n_col)
 {

@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   header.h                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: breheg <breheg@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/06/13 14:28:02 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 00:54:27 by akorthou      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   header.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/14 01:14:33 by breheg            #+#    #+#             */
+/*   Updated: 2026/06/14 01:21:50 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <header.h>
+// #include "header.h"
 
 #ifndef HEADER_H
 #define HEADER_H
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <header.h>
+
 int	check_row_left(int row[4], int constraint, int n_col);
 int	check_row_right(int row[4], int constraint, int n_col);
 int	check_col_bottom(int matrix[4][4], int constraint, int n_row, int j);
@@ -24,3 +29,10 @@ int check_box_allowed_col(int matrix[4][4], int box, int current, int j);
 int	*parse_input(char *str, int *result);
 
 #endif
+
+/*
+when this command is run:  cc -Wall -Wextra -Werror -o rush01 *.c
+becouse of cc *.c all .c files wil be compiled.
+there is no need to include any other liberys then this one becouse there are all in here
+if we need to add a libery add it in our header
+*/
