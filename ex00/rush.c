@@ -6,21 +6,13 @@
 /*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/13 15:19:14 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/13 22:08:42 by akorthou      ########   odam.nl         */
+/*   Updated: 2026/06/14 01:00:44 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <header.h>
-
-
-int	check_row_left(int *row, int constraint, int n_col);
-int	check_row_right(int *row, int constraint, int n_col);
-int	check_col_bottom(int *matrix, int constraint, int n_row, int j);
-int	check_col_top(int *matrix, int constraint, int n_row, int j);
-int check_box_allowed_row(int *row, int box, int current);
-int check_box_allowed_col(int *matrix, int box, int current, int j);
 
 int	*parse_input(char *str, int *result)
 {
@@ -35,11 +27,51 @@ int	*parse_input(char *str, int *result)
 	return (result);
 } 
 
-int place_boxes(int **grid, int i, int j, int n)
+void init_grid(int grid[4][4], int n)
+{
+	int i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (j < n)
+	{
+		while (i < n) 
+		{
+			grid[i][j] = 0;
+			i++;
+		}
+		j++;
+	}
+}
+
+
+void place_boxes(int grid[4][4], int i, int j, int n)
 {
 	int	placed_all_boxes;
+	int w;
+	
 
 	placed_all_boxes =0;
+	w = 1;
+	while (w <= n){
+		if (check_box_allowed_row(grid[i], w, j) && check_box_allowed_col(grid,w,i, j) && grid[i][j] == 0)
+		{
+			grid[i][j] = w;
+			if(i == n-1 && j == n-1)
+			{
+			}
+			else if (j == n-1)
+			{
+				place_boxes(grid, i + 1, 0, n);
+			}
+			else 
+			{
+				place_boxes(grid, i, j+1, n);
+			}
+		
+		}
+	}	
 	
 }
 int	 main(void)
@@ -55,6 +87,7 @@ int	 main(void)
 	n = 4;
 	i = 0;
 	j = 0;
+	init_grid(grid, n);
 	parse_input(input,constraints);
 	place_boxes(grid, i, j, n);
 	

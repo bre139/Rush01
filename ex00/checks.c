@@ -6,11 +6,11 @@
 /*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/13 13:40:30 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/13 19:35:40 by akorthou      ########   odam.nl         */
+/*   Updated: 2026/06/14 00:55:33 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_row_left(int *row, int constraint, int n_col)
+int	check_row_left(int row[4], int constraint, int n_col)
 {
 	int	j;
 	int	max;
@@ -37,7 +37,7 @@ int	check_row_left(int *row, int constraint, int n_col)
 	}
 }
 
-int	check_row_right(int *row, int constraint, int n_col)
+int	check_row_right(int row[4], int constraint, int n_col)
 {
 	int	j;
 	int	max;
@@ -64,7 +64,7 @@ int	check_row_right(int *row, int constraint, int n_col)
 	}
 }
 
-int	check_col_bottom(int *matrix, int constraint, int n_row, int j)
+int	check_col_bottom(int matrix[4][4], int constraint, int n_row, int j)
 {
 	int	i;
 	int	max;
@@ -91,7 +91,7 @@ int	check_col_bottom(int *matrix, int constraint, int n_row, int j)
 	}
 }
 
-int	check_col_top(int *matrix, int constraint, int n_row, int j)
+int	check_col_top(int matrix[4][4], int constraint, int n_row, int j)
 {
 	int	i;
 	int	max;
@@ -118,7 +118,7 @@ int	check_col_top(int *matrix, int constraint, int n_row, int j)
 	}
 }
 
-int check_box_allowed_row(int *row, int box, int current)
+int check_box_allowed_row(int row[4], int box, int current)
 {
 	int j;
 	
@@ -134,7 +134,7 @@ int check_box_allowed_row(int *row, int box, int current)
 	return (1);
 }
 
-int check_box_allowed_col(int *matrix, int box, int current, int j)
+int check_box_allowed_col(int matrix[4][4], int box, int current, int j)
 {
 	int i;
 	
