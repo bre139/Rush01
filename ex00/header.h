@@ -6,13 +6,11 @@
 /*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 14:28:02 by breheg            #+#    #+#             */
-/*   Updated: 2026/06/13 21:57:23 by breheg           ###   ########.fr       */
+/*   Updated: 2026/06/13 22:01:54 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include "header.h"
-*/
+// #include <header.h>
 
 #ifndef HEADER_H
 #define HEADER_H
