@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 01:14:33 by breheg            #+#    #+#             */
-/*   Updated: 2026/06/14 01:21:50 by breheg           ###   ########.fr       */
+/*   Updated: 2026/06/14 01:35:03 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <header.h>
 
 int	check_row_left(int row[4], int constraint, int n_col);
 int	check_row_right(int row[4], int constraint, int n_col);
