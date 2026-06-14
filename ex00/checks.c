@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   checks.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/13 13:40:30 by akorthou          #+#    #+#             */
-/*   Updated: 2026/06/14 02:38:55 by breheg           ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   checks.c                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: breheg <breheg@student.codam.nl>             +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/06/13 13:40:30 by akorthou      #+#    #+#                 */
+/*   Updated: 2026/06/14 06:32:10 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	ft_cheak_imput(char *str)
+int	ft_check_imput(char *str)
 {
 	int	i;
 	int	j;
@@ -172,5 +172,36 @@ int check_box_allowed_col(int matrix[4][4], int box, int current, int j)
 		}
 		i++;
 	}
+	return (1);
+}
+
+int checkRowCol(int matrix[4][4], int i, int *c, int j)
+{
+	if (check_row_left(matrix[i], c[8 + i],4) == 0)
+		return (0);
+	if (check_row_right(matrix[i], c[12 + i], 4) == 0)
+		return (0);
+	if (check_col_top(matrix, c[i],4, j) == 0)
+		return (0);
+	if(check_col_bottom(matrix, c[i+4],4, j) == 0)
+		return (0);
+	return (1);
+}
+
+int checkRow(int matrix[4][4], int i, int *c, int n)
+{
+	if (check_row_left(matrix[i], c[8 + i],n) == 0)
+		return (0);
+	if (check_row_right(matrix[i], c[12 + i], n) == 0)
+		return (0);
+	return (1);
+}
+
+int checkCol(int matrix[4][4], int i, int *c, int j)
+{
+	if (check_col_top(matrix, c[i],4,j) == 0)
+		return (0);
+	if(check_col_bottom(matrix, c[i+4],4, j) == 0)
+		return (0);
 	return (1);
 }
