@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 13:40:30 by akorthou          #+#    #+#             */
-/*   Updated: 2026/06/14 02:26:16 by breheg           ###   ########.fr       */
+/*   Updated: 2026/06/14 02:38:55 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,21 @@
 
 int	ft_cheak_imput(char *str)
 {
-	
+	int	i;
+	int	j;
+
+	j = 0;
+	i = 0;
+	while (i < 4)
+	{
+		j = 0;
+		while (j < 4)
+		{
+			if (str[j] <= '1' || str[j] >= '4')
+			j++;	
+		}
+		i++;
+	}
 }
 void	print_error(void)
 {
