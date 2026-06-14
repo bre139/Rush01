@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   parse.c                                            :+:    :+:            */
+/*   ft_strcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: breheg <breheg@student.codam.nl>             +#+                     */
+/*   By: akadirog <akadirog@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/06/14 07:42:31 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 17:16:02 by akadirog      ########   odam.nl         */
+/*   Created: 2026/06/11 16:11:13 by akadirog      #+#    #+#                 */
+/*   Updated: 2026/06/14 18:46:29 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "header.h"
 
-int	*parse_input(char *str, int *result)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[i] != 0)
+	while (src[i])
 	{
-		result[i/2] = (int)str[i] - '0';
-		i+=2;
+		*(dest + i) = *(src + i);
+		i++;
 	}
-	return (result);
+	return (dest);
 }

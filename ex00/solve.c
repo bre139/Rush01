@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 07:35:33 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 13:21:32 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 17:03:55 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int	is_valid_place(int grid[4][4], int row, int col)
 	return (1);
 }
 
-int	solve(int grid[4][4], int constraints[16], int pos)
-{
-	int	row;
-	int	pos;
-	int	n;
+// int	solve(int grid[4][4], int constraints[16], int pos)
+// {
+// 	int	row;
+// 	int	pos;
+// 	int	n;
 
-	if (pos == 16)
-	{
-		if
-	}
-}
+// 	if (pos == 16)
+// 	{
+// 		if
+// 	}
+// }
