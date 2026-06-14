@@ -6,21 +6,21 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 01:14:20 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 05:28:27 by akorthou      ########   odam.nl         */
+/*   Updated: 2026/06/14 13:39:50 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	 main(void)
+int	 main(int argc, char **argv)
 {
-	char input[]= "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
+	char input1[]= "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
+	char input[] = argv[1];
 	int	constraints[16];
 	int n;
 	int grid[4][4];
 	int i;
 	int j;
-	
 	
 	n = 4;
 	i = 0;
@@ -29,5 +29,4 @@ int	 main(void)
 	parse_input(input,constraints);
 	place_boxes(grid, i, j, constraints);
 	put_matrix(grid, n);
-	
 }

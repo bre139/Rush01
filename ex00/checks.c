@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/13 13:40:30 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 13:20:32 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 13:32:14 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_check_imput(char *str)
 		while (j < 4)
 		{
 			if (str[j] <= '1' || str[j] >= '4')
-			j++;	
+			j++;
 		}
 		i++;
 	}

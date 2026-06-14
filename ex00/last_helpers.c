@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 07:01:01 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 13:20:18 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 13:35:30 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	check_input(char *str)
 	{
 		if (i % 2 == 0)
 		{
-			if (str[i] < '1' || str[i] > '4')
+			if (str[i] <= '1' || str[i] >= '4')
 				return (0);
 			count++;
 		}
