@@ -6,13 +6,14 @@
 /*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/12 18:36:42 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 16:27:19 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 21:16:29 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "header.h"
 #include <unistd.h>
 
-int solveSkyscraper(int board[4][4])
+int solveSkyscraper(int grid[4][4], int *constraints)
 {
 	int c;
 	int r;
@@ -23,9 +24,9 @@ int solveSkyscraper(int board[4][4])
 		r = 0;
 		while (r < 4)
 		{
-			if (board[r][c] == 0)
+			if (grid[r][c] == 0)
 			{
-				solveskyscraper_trynewnumber(board, r, c);
+				solveskyscraper_trynewnumber(grid, r, c, constraints);
 			}
 			r++;
 		}
@@ -34,24 +35,24 @@ int solveSkyscraper(int board[4][4])
 	return (1);
 }
 
-int solveskyscraper_trynewnumber(int board[4][4], int row, int column)
+int solveskyscraper_trynewnumber(int grid[4][4], int row, int column, int *constraints)
 {
 	int try_number;
 	
 	try_number = 1;
 	while(try_number <= 4)
 	{
-		if (/*is valid placement function(board, number_we_want_to_try, r, c)*/ + /*is valid placement for clues(board, try, r, c)*/)
+		if (/*solver function*/)
 		{
-			board[row][column] = try_number;
+			grid[row][column] = try_number;
 
-			if(solveSkyscraper(board))
+			if(solveSkyscraper(grid, constraints))
 			{
 				return (1);
 			}
 			else
 			{
-				board[row][column] = 0;
+				grid[row][column] = 0;
 			}
 		}
 		try_number++;

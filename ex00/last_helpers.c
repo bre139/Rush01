@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 07:01:01 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 13:35:30 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 18:58:01 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ int	check_input(char *str)
 		return (0);
 	return (1);
 }
-
-
 
 int	check_all_constraints(int grid[4][4], int constraints[16])
 {

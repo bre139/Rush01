@@ -6,7 +6,7 @@
 /*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 02:05:10 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 15:49:14 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 22:20:22 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void put_matrix(int matrix[4][4], int n)
 	}
 }
 
-// TO BE REMOVED
+// THIS IS FOR TEST, TO BE REMOVED
 /* int main(void)
 {
 	int grid[4][4] = {
