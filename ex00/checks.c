@@ -6,11 +6,20 @@
 /*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 13:40:30 by akorthou          #+#    #+#             */
-/*   Updated: 2026/06/14 01:22:25 by breheg           ###   ########.fr       */
+/*   Updated: 2026/06/14 02:26:16 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
+
+int	ft_cheak_imput(char *str)
+{
+	
+}
+void	print_error(void)
+{
+	write(1, "error", 5);
+}
 
 int	check_row_left(int row[4], int constraint, int n_col)
 {
