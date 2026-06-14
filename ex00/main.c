@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 01:14:20 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 02:12:17 by akorthou      ########   odam.nl         */
+/*   Updated: 2026/06/14 05:28:27 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	 main(void)
 	j = 0;
 	init_grid(grid, n);
 	parse_input(input,constraints);
-	place_boxes(grid, i, j, n);
+	place_boxes(grid, i, j, constraints);
 	put_matrix(grid, n);
 	
 }

@@ -6,7 +6,7 @@
 /*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 02:05:10 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 02:13:51 by akorthou      ########   odam.nl         */
+/*   Updated: 2026/06/14 04:24:01 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ void put_matrix(int matrix[4][4], int n)
 	{
 		while (i >= 0)
 		{
-				c = matrix[i][j];
+				c = matrix[i][j]+'0';
 				write(1,&c,1);
 				i--;
 		}
 		c = '\n';
 		write(1,&c,1);
 		j++;
+		i=n-1;
 	}
 }
