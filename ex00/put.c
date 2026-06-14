@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   put.c                                              :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: breheg <breheg@student.codam.nl>             +#+                     */
+/*   By: akorthou <akorthou@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/06/14 01:14:20 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 02:12:17 by akorthou      ########   odam.nl         */
+/*   Created: 2026/06/14 02:05:10 by akorthou      #+#    #+#                 */
+/*   Updated: 2026/06/14 02:13:51 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	 main(void)
+void put_matrix(int matrix[4][4], int n)
 {
-	char input[]= "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
-	int	constraints[16];
-	int n;
-	int grid[4][4];
-	int i;
+	int	i;
 	int j;
-	
-	
-	n = 4;
-	i = 0;
+	char c;
+
 	j = 0;
-	init_grid(grid, n);
-	parse_input(input,constraints);
-	place_boxes(grid, i, j, n);
-	put_matrix(grid, n);
-	
+	i = n-1;
+	c = '0';
+	while (j < n)
+	{
+		while (i >= 0)
+		{
+				c = matrix[i][j];
+				write(1,&c,1);
+				i--;
+		}
+		c = '\n';
+		write(1,&c,1);
+		j++;
+	}
 }

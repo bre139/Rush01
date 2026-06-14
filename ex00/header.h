@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/14 01:14:33 by breheg            #+#    #+#             */
-/*   Updated: 2026/06/14 01:35:03 by breheg           ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   header.h                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: breheg <breheg@student.codam.nl>             +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/06/14 01:14:33 by breheg        #+#    #+#                 */
+/*   Updated: 2026/06/14 02:12:42 by akorthou      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int	check_row_left(int row[4], int constraint, int n_col);
 int	check_row_right(int row[4], int constraint, int n_col);
@@ -26,7 +27,9 @@ int check_box_allowed_row(int row[4], int box, int current);
 int check_box_allowed_col(int matrix[4][4], int box, int current, int j);
 
 int	*parse_input(char *str, int *result);
-
+void init_grid(int grid[4][4], int n);
+void place_boxes(int grid[4][4], int i, int j, int n);
+void put_matrix(int matrix[4][4], int n);
 #endif
 
 /*
