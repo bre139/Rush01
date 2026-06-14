@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   header.h                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: breheg <breheg@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/06/14 01:14:33 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 06:22:15 by akorthou      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   header.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/14 01:14:33 by breheg            #+#    #+#             */
+/*   Updated: 2026/06/14 07:26:48 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ int	*parse_input(char *str, int *result);
 void init_grid(int grid[4][4], int n);
 void place_boxes(int grid[4][4], int i, int j, int *c);
 void put_matrix(int matrix[4][4], int n);
+
+int	check_input(char *str);
+int	is_valid_place(int grid[4][4], int row, int col);
+int	check_all_constraints(int grid[4][4], int constraints[16])
 #endif
 
 /*
