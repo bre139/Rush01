@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 01:14:33 by breheg            #+#    #+#             */
-/*   Updated: 2026/06/14 07:26:48 by breheg           ###   ########.fr       */
+/*   Updated: 2026/06/14 07:31:00 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void put_matrix(int matrix[4][4], int n);
 
 int	check_input(char *str);
 int	is_valid_place(int grid[4][4], int row, int col);
-int	check_all_constraints(int grid[4][4], int constraints[16])
+int	check_all_constraints(int grid[4][4], int constraints[16]);
 #endif
 
 /*

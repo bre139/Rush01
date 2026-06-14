@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   rush.c                                             :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: breheg <breheg@student.codam.nl>             +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/06/13 15:19:14 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 06:34:07 by akorthou      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   rush.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/13 15:19:14 by akorthou          #+#    #+#             */
+/*   Updated: 2026/06/14 07:43:14 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	*parse_input(char *str, int *result)
-{
-	int i;
 
-	i = 0;
-	while ( str[i]!= 0)
-	{
-		result[i/2] = (int)str[i] - '0';
-		i+=2;
-	}
-	return (result);
-} 
 
 void init_grid(int grid[4][4], int n)
 {

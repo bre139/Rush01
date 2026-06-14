@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checks.c                                           :+:      :+:    :+:   */
+/*   solve.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: breheg <breheg@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/13 13:40:30 by akorthou          #+#    #+#             */
-/*   Updated: 2026/06/14 07:41:30 by breheg           ###   ########.fr       */
+/*   Created: 2026/06/14 07:35:33 by breheg            #+#    #+#             */
+/*   Updated: 2026/06/14 07:36:51 by breheg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	ft_check_imput(char *str)
+// the solve should be added
+
+int	is_valid_place(int grid[4][4], int row, int col)
 {
-	int	i;
-	int	j;
+	int	n;
 
-	j = 0;
-	i = 0;
-	while (i < 4)
-	{
-		j = 0;
-		while (j < 4)
-		{
-			if (str[j] <= '1' || str[j] >= '4')
-			j++;	
-		}
-		i++;
-	}
+	n = grid[row][col];
+	if (!check_box_allowed_row(grid[row], n, col))
+		return (0);
+	if (!check_box_allowed_col(grid, n, row, col))
+		return (0);
+	return (1);
 }
-void	print_error(void)
-{
-	write(1, "error", 5);
-}
-
-
-
-
-
-
-
