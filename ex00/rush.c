@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/13 15:19:14 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 13:21:34 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 15:05:45 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void init_grid(int grid[4][4], int n)
 	int i;
 	int	j;
 
-	
 	j = 0;
 	while (j < n)
 	{
@@ -32,7 +31,6 @@ void init_grid(int grid[4][4], int n)
 		j++;
 	}
 }
-
 
 void place_boxes(int grid[4][4], int i, int j, int *c)
 {
@@ -69,5 +67,4 @@ void place_boxes(int grid[4][4], int i, int j, int *c)
 		}
 		w++;
 	}	
-	
 }

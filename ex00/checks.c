@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/13 13:40:30 by akorthou      #+#    #+#                 */
-/*   Updated: 2026/06/14 13:32:14 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 14:57:49 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,3 @@ void	print_error(void)
 {
 	write(1, "error", 5);
 }
-
-
-
-
-
-
-

@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 07:41:16 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 13:20:22 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 14:57:59 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,3 @@ int check_box_allowed_col(int matrix[4][4], int box, int current, int j)
 	}
 	return (1);
 }
-

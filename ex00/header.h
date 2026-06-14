@@ -6,7 +6,7 @@
 /*   By: breheg <breheg@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/14 01:14:33 by breheg        #+#    #+#                 */
-/*   Updated: 2026/06/14 13:20:43 by akadirog      ########   odam.nl         */
+/*   Updated: 2026/06/14 16:24:28 by akadirog      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void put_matrix(int matrix[4][4], int n);
 int	check_input(char *str);
 int	is_valid_place(int grid[4][4], int row, int col);
 int	check_all_constraints(int grid[4][4], int constraints[16]);
+
+int solveSkyscraper(int board[4][4]);
 #endif
 
 /*
